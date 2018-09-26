@@ -359,9 +359,9 @@ $(document).ready(function() {
     } );
 
 
-    var sidebarParent = $(".js-sidebar-parent"),
-        totalPriceBox = $(".js-total-price-box"),
-        priceBoxPos = sidebarParent.offset().top;
+    // var sidebarParent = $(".js-sidebar-parent"),
+    //     totalPriceBox = $(".js-total-price-box"),
+    //     priceBoxPos = sidebarParent.offset().top;
 
 
     // function totalPriceBoxPosition() {
