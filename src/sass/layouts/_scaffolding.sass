@@ -62,14 +62,14 @@ body
 
 .page
     min-width: 320px
+    min-height: 100vh
     position: relative
     display: flex
     flex-direction: column
-    min-height: 100vh
     &__main
         flex: 1
     &__menu
-        position: fixed
+        position: absolute
         overflow-y: auto
         left: -100%
         top: 0
@@ -98,7 +98,7 @@ body
         left: 0
         width: 100%
         height: 100%
-        position: fixed
+        position: absolute
         top: 0
         display: none
         z-index: 1000
@@ -106,34 +106,42 @@ body
         opacity: 0.8
 
 .popups
-    &__popups-wrapper
+    &__popup
         display: flex
-        position: absolute
-        left: 0
-        top: 0
         width: 100%
         height: 100%
         overflow: auto
         align-items: center
         justify-content: center
         padding: 0 10px
-    &__popup
-        width: 700px
-        display: none
-        pointer-events: auto
-        &_w_580
-            width: 580px
+        position: absolute
+        left: 0
+        top: 0
+        z-index: 0
+        opacity: 0
+        &.active
+            opacity: 1
+            z-index: 1000
 
 .popup
+    width: 700px
+    pointer-events: auto
     padding: 30px 20px 0
     position: relative
     background-color: #fff
     border: 1px solid #333
+    &_w_580
+        width: 580px
     &_video
         padding: 0
     &__header
-        margin-bottom: 30px
+        margin-bottom: 20px
+        padding-bottom: 20px
         padding-right: 40px
+        &_border
+            border-bottom: 1px solid $lightGray
+    &__title
+        margin-bottom: 10px
     &__close
         position: absolute
         right: 20px
@@ -161,17 +169,40 @@ body
         font-weight: 600
         font-size: 16px
 
+.notice
+    border: 2px solid $yellow
+    background-color: $lightGray
+    padding: 20px
+    display: flex
+    align-items: center
+    &__icon
+        width: 64px
+        height: 64px
+        border: 5px solid #333
+        font-size: 50px
+        text-align: center
+        line-height: 54px
+        margin-right: 20px
+        border-radius: 50%
+        flex-shrink: 0
+        font-weight: 600
+
 .st-title
     font-size: 20px
     line-height: 1.2em
     font-family: 'ffbold'
     font-weight: normal
+    &_fw_600
+        font-weight: 600
+        font-family: inherit
     &_fz_12
         font-size: 12px
     &_fz_14
         font-size: 14px
     &_fz_16
         font-size: 16px
+    &_fz_18
+        font-size: 18px
     &_fz_30
         font-size: 30px
     &_lh_40
@@ -251,7 +282,8 @@ body
         color: $red
         border-color: $red
         +phc($red)
-
+    &_h_80
+        height: 80px
 
 .section-title
     font-size: 28px
@@ -439,26 +471,27 @@ body
 
 .header-main-box
     padding: 15px 23px
-    background-image: url('./../images/backgrounds/yellow-gradient.png')
-    -webkit-background-size: auto 100%
-    background-size: auto 100%
+    //background-image: url('./../images/backgrounds/yellow-gradient.png')
+    //-webkit-background-size: auto 100%
+    //background-size: auto 100%
     background-repeat: repeat-x
     position: relative
     box-shadow: 0 0 5px 2px #909090
-    &:before, &:after
-        content: ''
-        background-image: url('./../images/backgrounds/yellow-gradient-borders.png')
-        -webkit-background-size: auto 100%
-        background-size: auto 100%
-        position: absolute
-        left: 0
-        top: 0
-        height: 100%
-        width: 23px
-    &:after
-        background-position: -23px 0
-        left: auto
-        right: 0
+    margin: 5px 0
+    //&:before, &:after
+    //    content: ''
+    //    background-image: url('./../images/backgrounds/yellow-gradient-borders.png')
+    //    -webkit-background-size: auto 100%
+    //    background-size: auto 100%
+    //    position: absolute
+    //    left: 0
+    //    top: 0
+    //    height: 100%
+    //    width: 23px
+    //&:after
+    //    background-position: -23px 0
+    //    left: auto
+    //    right: 0
     &__content
         display: flex
         align-items: center
@@ -565,6 +598,9 @@ body
         .products-list__item
             border-bottom: 1px solid $lightGray
             margin-bottom: 0
+    &_card
+        .products-list-item
+            flex-wrap: wrap
 
 
 .products-list-item
@@ -573,7 +609,6 @@ body
     align-items: center
     justify-content: space-between
     border: 1px solid $darkGray
-    flex-wrap: wrap
     &_single
         padding: 10px 0
         border: none
@@ -733,8 +768,12 @@ body
         font-size: 20px
         top: 50%
         right: 10px
-        margin-top: -10px
+        margin-top: -12px
         color: inherit
+        outline: none
+        border: none
+        background-color: inherit
+        cursor: pointer
 
 
 
@@ -762,6 +801,8 @@ body
     &__mobile-section
         display: none
         padding: 10px 0
+    &__mobile-search
+        display: none
     &__address
         width: 230px
         flex-shrink: 0
@@ -782,8 +823,8 @@ body
                 display: none
     &__toggle
         position: absolute
-        height: 30px
-        width: 30px
+        height: 26px 
+        width: 26px 
         border: none
         right: 12px
         top: 8px
@@ -799,6 +840,7 @@ body
             top: 50%
             margin-top: -1px
             border-radius: 10px
+            background-color: #000 
         &:after
             content: ''
             height: 100%
@@ -807,6 +849,7 @@ body
             width: 2px
             left: 50%
             border-radius: 10px
+            background-color: #000
     &__link
         color: inherit
         display: flex
@@ -1053,7 +1096,14 @@ body
         align-items: center
     &__icon-box
         margin-right: 20px
-        font-size: 50px
+        width: 50px
+        height: 50px
+        border: 2px solid #000
+        font-size: 30px
+        text-align: center
+        line-height: 46px
+        flex-shrink: 0
+        border-radius: 50%
     &__price
         font-size: 30px
         line-height: 1.2em
@@ -1061,6 +1111,7 @@ body
         text-align: center
         padding: 20px 0
         background-color: $lightGray
+
 
 .infographics-item
     text-align: center
@@ -1217,6 +1268,10 @@ a.nav-list-item_color_yellow:hover
             margin-bottom: 0
     &__line
         margin-bottom: 20px
+        &_bg_gray
+            background-color: $lightGray
+        &_p_20
+            padding: 20px
         &_mb_45
             margin-bottom: 45px
         &:last-child
@@ -1754,6 +1809,9 @@ a.nav-list-item_color_yellow:hover
         top: 50%
         margin-top: -17px
         transform: rotate(-45deg)
+        border: none
+        outline: none
+        background-color: inherit
         border-top: 10px solid #000
         border-left: 10px solid #000
     .owl-nav button.owl-next
@@ -1991,6 +2049,10 @@ a.nav-list-item_color_yellow:hover
 .step-box
     padding: 20px
     border: 1px solid $yellow
+    &__notice
+        padding: 15px
+        background-color: $lightGray
+        border: 1px solid $yellow
     &__title-box
         display: flex
         align-items: center
@@ -2016,6 +2078,7 @@ a.nav-list-item_color_yellow:hover
         justify-content: flex-end
     &__number
         margin-right: 15px
+        flex-shrink: 0
     &__contacts
         display: flex
         justify-content: space-between
@@ -2317,7 +2380,7 @@ a.nav-list-item_color_yellow:hover
         border-bottom: 1px solid #fff
         background-color: $lightGray
         position: relative
-        padding-right: 30px
+        padding-right: 35px
         cursor: pointer
     &__title
         font-weight: 600
@@ -2401,8 +2464,12 @@ a.nav-list-item_color_yellow:hover
             margin-bottom: 0
 
 @media screen and (max-width: 1300px)
-    .page-header__search
-        display: none
+    .page-header__bottom-nav
+        font-size: 12px
+
+    .search
+        width: 200px
+
 
     .promo-slider
         padding: 0 40px
@@ -2413,6 +2480,34 @@ a.nav-list-item_color_yellow:hover
 
 
 @media screen and (max-width: 992px)
+    .products-list-item
+        &__text
+            width: auto
+            flex-shrink: 1
+
+    .section-sidebar
+        display: block
+
+    .section-sidebar__sidebar
+        display: none
+
+
+    .popups__popup
+        display: block
+
+    .popup
+        margin: 50px auto
+        width: 90%
+
+    .product-item
+        &__price-grid
+            display: block
+        &__price-text
+            text-align: center
+            margin-bottom: 15px
+        &__price-button
+            text-align: center
+
     .main-nav
         justify-content: space-between
 
@@ -2477,6 +2572,7 @@ a.nav-list-item_color_yellow:hover
         font-size: 12px
 
     .grid
+        margin: -20px -5px 0
         &__item
             padding: 20px 5px 0
 
@@ -2489,6 +2585,33 @@ a.nav-list-item_color_yellow:hover
 
 
 @media screen and (max-width: 768px)
+    .nav-list_cities
+        column-count: 2
+
+    .main-nav-item
+        position: relative
+        &__dropmenu
+            position: static
+            opacity: 1
+            pointer-events: auto
+            display: none
+            transition: none
+            background: inherit
+            border-top: 1px solid #333
+    .main-nav-dropmenu
+        border: none
+        background-color: inherit
+        &__header-item
+            padding: 8px 5px
+            width: 100%
+            display: block
+            color: inherit
+            text-decoration: none
+            border-bottom: 1px solid #333
+            padding-left: 15px
+            &:last-child
+                border-bottom: none
+
     .page__menu
         .main-nav
             display: block
@@ -2701,7 +2824,6 @@ a.nav-list-item_color_yellow:hover
 
 
     .grid
-        margin: -20px -5px 0
         &__item
             width: 50%
         &_2el
@@ -2822,6 +2944,14 @@ a.nav-list-item_color_yellow:hover
 
 
 @media screen and (max-width: 576px)
+    .field-button-box
+        display: block
+        text-align: center
+        max-width: 100%
+
+        .input
+            margin-bottom: 10px
+
     .page-footer
         &__navs
             display: block
@@ -2867,3 +2997,51 @@ a.nav-list-item_color_yellow:hover
             width: 100%
             text-align: left
 
+    .step-box__header
+        .change-button__circle
+            display: none
+
+    .step-box
+        &__contacts
+            display: block
+        &__contacts-item
+            margin-bottom: 10px
+            &:last-child
+                margin-bottom: 0
+
+
+    .form-price-grid
+        flex-wrap: wrap
+        &__content
+            width: 100%
+            margin-bottom: 15px
+
+    .st-form
+        .grid_3el .grid__item
+            width: 100%
+
+
+    .addresses-shops-box
+        height: auto
+        &__list
+            position: static
+            width: 100%
+            height: 250px
+        &__map
+            padding: 0
+            height: 200px
+
+    .step-box__footer
+        display: block
+        text-align: center
+        padding: 10px
+        .st-label
+            margin-bottom: 10px
+
+    .order-price-grid__line
+        display: block
+        padding: 10px 0
+
+    .order-price-grid__content
+        padding-right: 0
+        margin-bottom: 10px

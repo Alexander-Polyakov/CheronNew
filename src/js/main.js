@@ -12,7 +12,7 @@ $(document).ready(function() {
         $('.js-popups-overlay').fadeIn(400);
         $('.js-popups').fadeIn(400);
 
-        $('[data-popup-name='+popupName+']').fadeIn(400);
+        $('[data-popup-name='+popupName+']').addClass('active');
     }
 
 
@@ -256,7 +256,7 @@ $(document).ready(function() {
         $('.js-popups-overlay').fadeOut(400);
         $('.js-popups').fadeOut(400);
 
-        $('[data-popup-name]').fadeOut(400);
+        $('[data-popup-name]').removeClass('active');
     });
 
 
@@ -268,6 +268,12 @@ $(document).ready(function() {
         thisBlock.find('.toggle-content__content-item').removeClass('active');
         thisBlock.find('.toggle-content__content-item').eq(index).addClass("active");
         $(this).addClass("active");
+    });
+
+    $(".js-toggle-dropmenu").click(function(){
+        var item = $(this).closest('.main-nav-item');
+        item.toggleClass('opened');
+        item.find(".main-nav-item__dropmenu").stop().slideToggle(400);
     });
 
     $('.js-counter').each(function(){
@@ -359,23 +365,34 @@ $(document).ready(function() {
     } );
 
 
-    // var sidebarParent = $(".js-sidebar-parent"),
-    //     totalPriceBox = $(".js-total-price-box"),
-    //     priceBoxPos = sidebarParent.offset().top;
 
 
-    // function totalPriceBoxPosition() {
-    //     if ($(document).scrollTop() >  priceBoxPos) {
-    //         totalPriceBox.addClass("fixed");
-    //     } else {
-    //         totalPriceBox.removeClass("fixed");
-    //     }
-    // }
-    //
-    //
-    // totalPriceBoxPosition();
-    // $(window).scroll(function () {
-    //     totalPriceBoxPosition();
-    // });
+    var sidebarParent = $(".js-sidebar-parent");
+
+
+    if (sidebarParent.length) {
+        var priceBoxPos = sidebarParent.offset().top,
+            totalPriceBox = $(".js-total-price-box");
+
+        function totalPriceBoxPosition() {
+            if ($(document).scrollTop() >  priceBoxPos) {
+                totalPriceBox.addClass("fixed");
+            } else {
+                totalPriceBox.removeClass("fixed");
+            }
+        }
+
+        totalPriceBoxPosition();
+
+        $(window).scroll(function () {
+            if ($(document).outerWidth() > 992) {
+                totalPriceBoxPosition();
+            }
+        });
+    }
+
+
+
+
 
 });

@@ -27,7 +27,7 @@ header.page-header
                 p.icon-button__text Воронеж
 
     .page-header__middle-section
-        .header-main-box
+        .header-main-box.st--bg--gradient
             .header-main-box__content
                 .header-main-box__small-section
                     a(href='index.html').logo
@@ -181,7 +181,7 @@ header.page-header
                                             a(href='#').st-button Смотреть
 
                 li.main-nav__item.main-nav-item
-                    a(href='#').main-nav-item__link
+                    a(href='delivery.html').main-nav-item__link
                         span.main-nav-item__link-text Доставка и оплата
                 li.main-nav__item.main-nav-item
                     a(href='shares.html').main-nav-item__link
@@ -199,8 +199,12 @@ header.page-header
         .page-header__search
             form.search
                 input(type='text' placeholder='Поиск по сайту').search__field.js-search-header
-                a(href='#').search__button
-                    .search__icon.icon-ok
+                button.search__button
+                    i.search__icon.icon-search
+
+        .page-header__mobile-search
+            a(href='#').mobile-search-link
+                .mobile-search-link__icon.icon-search
 
 
     .page-header__mobile-section

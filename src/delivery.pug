@@ -1,0 +1,88 @@
+include pug/project-settings.pug
+include pug/mixins/mixins.pug
+include pug/components/productItem
+include pug/components/breadcrumbs.pug
+
+
+doctype html
+html
+    head(lang="en")
+        include pug/metatags.pug
+        +title('Главная')
+        include pug/styles.pug
+
+    body
+        .page.container
+
+                include pug/components/header
+
+                main.page__main
+                    .page-section
+                        .page-section__section.page-section__section_mb_45
+                            +breadcrumbs('Корзина')
+
+                        .page-section__section
+                            h1.st-title.ttu Доставка и оплата
+
+                        .page-section__section
+                            .grid
+                                .grid__item
+                                    .infographics-grid-item
+                                        .infographics-grid-item__circle
+                                            .infographics-grid-item__icon.icon-basket
+                                        .infographics-grid-item__content Оформляете заказ
+                                .grid__item
+                                    .infographics-grid-item
+                                        .infographics-grid-item__circle
+                                            .infographics-grid-item__icon.icon-phone
+                                        .infographics-grid-item__content Наш оператор позвонит вам
+                                .grid__item
+                                    .infographics-grid-item
+                                        .infographics-grid-item__circle
+                                            .infographics-grid-item__icon.icon-truck
+                                        .infographics-grid-item__content Доставка до порога
+                                .grid__item
+                                    .infographics-grid-item
+                                        .infographics-grid-item__circle
+                                            .infographics-grid-item__icon.icon-rouble
+                                        .infographics-grid-item__content Оплата при получении
+
+                        .page-section__section
+                            .st-title.tac.ttu.st-title_fz_18  Оформление заказа
+
+                        .page-section__section
+                            .st-text
+                                p Выберите товар и нажмите КУПИТЬ
+                                p На странице ОФОРМИТЬ ЗАКАЗ
+                                p Заполните все поля, отмеченные *
+                                p Город доставки нужно выбрать из списка, который формируется при вводе первых букв вашего города.
+                                p Также вы можете выбрать доставку до двери или до ПВЗ (пункт выдачи заказов). Стоимость доставки от 200 руб.
+                                p Сумма заказа и доставки считается автоматически.
+
+                        .page-section__section
+                            .container.container_w_600
+                                .notice
+                                    .notice__icon i
+
+                                    .notice__content
+                                        .st-text
+                                            p Для подтверждения заказа наш оператор свяжется с вами по телефону с 9:00 до 18:00 (пн-пт)
+
+                                            p ПО МОСКОВСКОМУ ВРЕМЕНИ
+
+
+                        .page-section__section
+                            .st-text
+                                p Компания СДЭК доставит заказ по указанному вами при оформлении адресу или в ПВЗ.
+
+                                p Оплата за товар и доставку при получении.
+
+
+
+
+                include pug/components/footer
+
+        include pug/scripts.pug
+        script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+        script(src='js/ymap.js')
+

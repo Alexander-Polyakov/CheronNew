@@ -13,179 +13,162 @@ html
 
     body
         .page.container
-            include pug/components/header
+                include pug/components/header
 
-            main.page__main
-                .page-section
-                    .page-section__section.page-section__section_mb_45
-                        +breadcrumbs('Корзина')
+                main.page__main
+                    .page-section
+                        .page-section__section.page-section__section_mb_45
+                            +breadcrumbs('Корзина')
 
-                    .page-section__section
-                        h1.st-title.ttu Корзина
+                        .page-section__section
+                            h1.st-title.ttu Корзина
 
-                    .page-section__section
-                        .section-sidebar.js-sidebar-parent
-                            .section-sidebar__main
-                                .page-section__section
-                                    .products-list
-                                        .products-list__item
-                                            .products-list-item
-                                                img(src='./images/products/product1.jpg').products-list-item__image
-                                                .products-list-item__text Мебельный кондуктор "угольник" шаг 25/50 диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30
-                                                .products-list-item__counter
-                                                    .counter.js-counter
-                                                        .counter__button(type='button').counter__button_minus
-                                                        input(type='number' value='1').counter__field.input
-                                                        .counter__button(type='button').counter__button_plus
-                                                .products-list-item__price-box
-                                                    .products-list-item__price 12 650 Руб.
-                                                .products-list-item__close
-                                                    button.btn-close.btn-close_circle
-                                        .products-list__item
-                                            .products-list-item
-                                                img(src='./images/products/product1.jpg').products-list-item__image
-                                                .products-list-item__text Мебельный кондуктор "угольник" шаг 25/50 диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30
-                                                .products-list-item__counter
-                                                    .counter.js-counter
-                                                        .counter__button(type='button').counter__button_minus
-                                                        input(type='number' value='1').counter__field.input
-                                                        .counter__button(type='button').counter__button_plus
-                                                .products-list-item__price-box
-                                                    .products-list-item__price 12 650 Руб.
-                                                .products-list-item__close
-                                                    button.btn-close.btn-close_circle
+                        .page-section__section
+                            .section-sidebar.js-sidebar-parent
+                                .section-sidebar__main
+                                    .page-section__section
+                                        .products-list.products-list_card
+                                            .products-list__item
+                                                .products-list-item
+                                                    img(src='./images/products/product1.jpg').products-list-item__image
+                                                    .products-list-item__text Мебельный кондуктор "угольник" шаг 25/50 диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30
+                                                    .products-list-item__counter
+                                                        .counter.js-counter
+                                                            .counter__button(type='button').counter__button_minus
+                                                            input(type='number' value='1').counter__field.input
+                                                            .counter__button(type='button').counter__button_plus
+                                                    .products-list-item__price-box
+                                                        .products-list-item__price 12 650 Руб.
+                                                    .products-list-item__close
+                                                        button.btn-close.btn-close_circle
+                                            .products-list__item
+                                                .products-list-item
+                                                    img(src='./images/products/product1.jpg').products-list-item__image
+                                                    .products-list-item__text Мебельный кондуктор "угольник" шаг 25/50 диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30
+                                                    .products-list-item__counter
+                                                        .counter.js-counter
+                                                            .counter__button(type='button').counter__button_minus
+                                                            input(type='number' value='1').counter__field.input
+                                                            .counter__button(type='button').counter__button_plus
+                                                    .products-list-item__price-box
+                                                        .products-list-item__price 12 650 Руб.
+                                                    .products-list-item__close
+                                                        button.btn-close.btn-close_circle
 
-                                .page-section__section
-                                    .field-button-box
-                                        input(type='text' placeholder='Купон на скидку').input.input_h_32
-                                        button.st-button.st-button_shadow_off Активировать
+                                    .page-section__section
+                                        .field-button-box
+                                            input(type='text' placeholder='Купон на скидку').input.input_h_32
+                                            button.st-button.st-button_shadow_off Активировать
 
-                                .page-section__section.page-section__section_mb_45
-                                    .products-list__item
-                                        .products-list__item
+                                    .page-section__section.page-section__section_mb_45
+                                        .products-list.products-list_card
                                             .products-list-item
                                                 img(src='./images/products/product1.jpg').products-list-item__image
                                                 .products-list-item__text Мебельный кондуктор "угольник" шаг 25/50 диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30
                                                 .products-list-item__gift
                                                     .products-list-item__price Подарок
 
-                                .page-section__section
-                                    form.step-box.st-box_border_yellow(data-order-step='1')
-                                        .step-box__header
-                                            .step-box__title-box
-                                                span.step-box__number.circle-number 1
-                                                span.step-box__title.st-title Контактные данные
+                                    .page-section__section
+                                        form.step-box.st-box_border_yellow(data-order-step='1')
+                                            .step-box__header
+                                                .step-box__title-box
+                                                    span.step-box__number.circle-number 1
+                                                    span.step-box__title.st-title Контактные данные
 
-                                        .step-box__content
-                                            .st-form
-                                                .st-form__line
-                                                    input(type='text' placeholder='ФИО получателя *' aria-required="true").input.required
-
-                                                .st-form__line
-                                                    input(type='email' placeholder='E-mail *' data-validation="email").input
-                                                    p На e-mail приходят сообщения о состоянии заказа
-
-                                                .st-form__line.st-form__line_mb_45
-                                                    input(type='tel' placeholder='Телефон *').input
-                                                    p Ваш номер необходим для согласования состава заказа, времени и места доставки
-
-                                                .st-form__line
-                                                    p
-                                                        b Вы можете оставить комментарий к заказу
-                                                    textarea(placeholder='На что обратить внимание при обработке вашего заказа?').textarea
-
-                                        .step-box__next-box
-                                            button.st-button.st-button_w_125 Далее
-
-                                .page-section__section
-                                    .step-box.st-box_border_yellow
-                                        .step-box__header.step-box__header_bot_line
-                                            .step-box__title-box
-                                                span.step-box__number.circle-number 1
-                                                span.step-box__title.st-title Контактные данные
-
-                                            button.change-button
-                                                p.change-button__text Изменить
-                                                .change-button__circle
-                                                    i.change-button__icon.icon-ok
-
-
-                                        .step-box__contacts
-                                            .step-box__contacts-item Иванов Иван Иванович
-                                            .step-box__contacts-item Ivanovivan@yandex.ru
-                                            .step-box__contacts-item +7 (000) 000-0000
-
-
-                                .page-section__section
-                                    form.step-box.st-box_border_yellow
-                                        .step-box__header
-                                            .step-box__title-box
-                                                span.step-box__number.circle-number 2
-                                                span.step-box__title.st-title Выберите город и способ доставки
-
-                                        .step-box__content
-                                            .st-form
-                                                .st-form__section
+                                            .step-box__content
+                                                .st-form
                                                     .st-form__line
-                                                        input(type='text' placeholder='Город доставки' required).input
-                                                        p Введите первые буквы названия города, затем выберите город из выпадающего списка.
+                                                        input(type='text' placeholder='ФИО получателя *' aria-required="true").input.required
+
                                                     .st-form__line
-                                                        .form-notice По выбранным Вами условиям доставка не возможна, заказ будет оформлен без доставки. <br/> Уточнить данные о доставке Вы можете, связавшись с представителем нашей компании.
+                                                        input(type='email' placeholder='E-mail *' data-validation="email").input
+                                                        p На e-mail приходят сообщения о состоянии заказа
 
-                                                .st-form__section
-                                                    .radio-toggle-content
-                                                        input(id='express-delivery' type='radio' name='order-delivery' checked='true').radio-toggle-content__input
-                                                        label(for='express-delivery').radio-toggle-content__label
-                                                            .form-price-grid
-                                                                .form-price-grid__content
-                                                                    p
-                                                                        span.st-checkbox.form-price-grid__checkbox
-                                                                            i.st-checkbox__icon.icon-ok
-                                                                        b СДЭК - Курьерская доставка (до двери
-                                                                .form-price-grid__value 1265 руб.
-                                                        .radio-toggle-content__dropdown
-                                                            .grid.grid_3el
-                                                                .grid__item
-                                                                    input(type='text' placeholder='Улица *' required).input
-                                                                .grid__item
-                                                                    input(type='text' placeholder='Дом/корпус *' required).input
-                                                                .grid__item
-                                                                    input(type='text' placeholder='Квартира *' required).input
+                                                    .st-form__line.st-form__line_mb_45
+                                                        input(type='tel' placeholder='Телефон *').input
+                                                        p Ваш номер необходим для согласования состава заказа, времени и места доставки
+
+                                                    .st-form__line
+                                                        p
+                                                            b Вы можете оставить комментарий к заказу
+                                                        textarea(placeholder='На что обратить внимание при обработке вашего заказа?').textarea
+
+                                            .step-box__next-box
+                                                button.st-button.st-button_w_125 Далее
+
+                                    .page-section__section
+                                        .step-box.st-box_border_yellow
+                                            .step-box__header.step-box__header_bot_line
+                                                .step-box__title-box
+                                                    span.step-box__number.circle-number 1
+                                                    span.step-box__title.st-title Контактные данные
+
+                                                button.change-button
+                                                    p.change-button__text Изменить
+                                                    .change-button__circle
+                                                        i.change-button__icon.icon-ok
 
 
-                                                .st-form__section
-                                                    .radio-toggle-content
-                                                        input(id='pickup' type='radio' name='order-delivery').radio-toggle-content__input
-                                                        label(for='pickup').radio-toggle-content__label
-                                                            .form-price-grid
-                                                                .form-price-grid__content
-                                                                    p
-                                                                        span.st-checkbox.form-price-grid__checkbox
-                                                                            i.st-checkbox__icon.icon-ok
-                                                                        b СДЭК - Самовывоз в пунктах выдачи заказов
-                                                                    p Cписок терминалов откроется при нажатии
-                                                                .form-price-grid__value 1265 руб.
-                                                        .radio-toggle-content__dropdown
-                                                            .addresses-shops-box.js-addresses-map
-                                                                .addresses-shops-box__list
-                                                                    label.map-radio-box
-                                                                        input(type='radio' checked='true' name='map-radio-box' data-address="ул. Шаболовка, 38" data-coords="55.718617,37.608913" data-title="Шаболовка 38").map-radio-box__input
-                                                                        .map-radio-box__header
-                                                                            .map-radio-box__title Шаболовка 38 (MSK87)
+                                            .step-box__contacts
+                                                .step-box__contacts-item Иванов Иван Иванович
+                                                .step-box__contacts-item Ivanovivan@yandex.ru
+                                                .step-box__contacts-item +7 (000) 000-0000
 
-                                                                            .map-radio-box__checkbox
-                                                                                .st-checkbox
-                                                                                    .st-checkbox__icon.icon-ok
 
-                                                                        .map-radio-box__content
-                                                                            p Воронеж, ул. Владимира Невского, 17
-                                                                            p Пн-Пт 10:00-20:00, Сб 10:00-16:00, Вс 10:00-16:00
-                                                                            p
-                                                                                b тел. +74732286835
+                                    .page-section__section
+                                        form.step-box.st-box_border_yellow
+                                            .step-box__header
+                                                .step-box__title-box
+                                                    span.step-box__number.circle-number 2
+                                                    span.step-box__title.st-title Выберите город и способ доставки
 
-                                                                    - for (var x = 0; x < 9; x++)
+                                            .step-box__content
+                                                .st-form
+                                                    .st-form__section
+                                                        .st-form__line
+                                                            input(type='text' placeholder='Город доставки' required).input
+                                                            p Введите первые буквы названия города, затем выберите город из выпадающего списка.
+                                                        .st-form__line
+                                                            .form-notice По выбранным Вами условиям доставка не возможна, заказ будет оформлен без доставки. <br/> Уточнить данные о доставке Вы можете, связавшись с представителем нашей компании.
+
+                                                    .st-form__section
+                                                        .radio-toggle-content
+                                                            input(id='express-delivery' type='radio' name='order-delivery' checked='true').radio-toggle-content__input
+                                                            label(for='express-delivery').radio-toggle-content__label
+                                                                .form-price-grid
+                                                                    .form-price-grid__content
+                                                                        p
+                                                                            span.st-checkbox.form-price-grid__checkbox
+                                                                                i.st-checkbox__icon.icon-ok
+                                                                            b СДЭК - Курьерская доставка (до двери
+                                                                    .form-price-grid__value 1265 руб.
+                                                            .radio-toggle-content__dropdown
+                                                                .grid.grid_3el
+                                                                    .grid__item
+                                                                        input(type='text' placeholder='Улица *' required).input
+                                                                    .grid__item
+                                                                        input(type='text' placeholder='Дом/корпус *' required).input
+                                                                    .grid__item
+                                                                        input(type='text' placeholder='Квартира *' required).input
+
+
+                                                    .st-form__section
+                                                        .radio-toggle-content
+                                                            input(id='pickup' type='radio' name='order-delivery').radio-toggle-content__input
+                                                            label(for='pickup').radio-toggle-content__label
+                                                                .form-price-grid
+                                                                    .form-price-grid__content
+                                                                        p
+                                                                            span.st-checkbox.form-price-grid__checkbox
+                                                                                i.st-checkbox__icon.icon-ok
+                                                                            b СДЭК - Самовывоз в пунктах выдачи заказов
+                                                                        p Cписок терминалов откроется при нажатии
+                                                                    .form-price-grid__value 1265 руб.
+                                                            .radio-toggle-content__dropdown
+                                                                .addresses-shops-box.js-addresses-map
+                                                                    .addresses-shops-box__list
                                                                         label.map-radio-box
-                                                                            input(type='radio' name='map-radio-box' data-address="ул. Шаболовка, 38" data-coords="5"+x+".718617,35"+x+".608913" data-title="Шаболовка 38").map-radio-box__input
+                                                                            input(type='radio' checked='true' name='map-radio-box' data-address="ул. Шаболовка, 38" data-coords="55.718617,37.608913" data-title="Шаболовка 38").map-radio-box__input
                                                                             .map-radio-box__header
                                                                                 .map-radio-box__title Шаболовка 38 (MSK87)
 
@@ -199,108 +182,136 @@ html
                                                                                 p
                                                                                     b тел. +74732286835
 
+                                                                        - for (var x = 0; x < 9; x++)
+                                                                            label.map-radio-box
+                                                                                input(type='radio' name='map-radio-box' data-address="ул. Шаболовка, 38" data-coords="5"+x+".718617,35"+x+".608913" data-title="Шаболовка 38").map-radio-box__input
+                                                                                .map-radio-box__header
+                                                                                    .map-radio-box__title Шаболовка 38 (MSK87)
+
+                                                                                    .map-radio-box__checkbox
+                                                                                        .st-checkbox
+                                                                                            .st-checkbox__icon.icon-ok
+
+                                                                                .map-radio-box__content
+                                                                                    p Воронеж, ул. Владимира Невского, 17
+                                                                                    p Пн-Пт 10:00-20:00, Сб 10:00-16:00, Вс 10:00-16:00
+                                                                                    p
+                                                                                        b тел. +74732286835
 
 
 
 
-                                                                .addresses-shops-box__map#map
+
+                                                                    .addresses-shops-box__map#map
 
 
-                                        .step-box__next-box
-                                            button.st-button.st-button_w_125 Далее
-
-
-
-
-
-                                .page-section__section
-                                    .step-box.st-box_border_yellow
-                                        .step-box__header.step-box__header_bot_line
-                                            .step-box__title-box
-                                                span.step-box__number.circle-number 2
-                                                span.step-box__title.st-title Выберите город и способ доставки
-
-                                            button.change-button
-                                                p.change-button__text Изменить
-                                                .change-button__circle
-                                                    i.change-button__icon.icon-ok
-
-
-                                        .form-price-grid
-                                            .form-price-grid__content
-                                                p
-                                                    b СДЭК - Курьерская доставка (до двери
-                                                p Воронеж, ул. Владимира Невского, 1
-                                            .form-price-grid__value 1265 руб.
-
-                                .page-section__section
-                                    .step-box.st-box_border_yellow
-                                        .step-box__header.step-box__header_bot_line
-                                            .step-box__title-box
-                                                span.step-box__number.circle-number 3
-                                                span.step-box__title.st-title Подтверждение заказа
-
-
-                                        .step-box__content
-                                            .order-price-grid
-                                                .order-price-grid__line
-                                                    .order-price-grid__content СДЭК - Курьерская доставка (до двери
-                                                    .order-price-grid__value 1265 руб.
-                                                .order-price-grid__line
-                                                    .order-price-grid__content СДЭК - Курьерская доставка (до двери
-                                                    .order-price-grid__value 1265 руб.
-                                                .order-price-grid__line.order-price-grid__line_total
-                                                    .order-price-grid__content Всего к оплате
-                                                    .order-price-grid__value 1265 руб.
-
-
-                                        .step-box__footer
-
-                                            label.st-label
-                                                input(type='checkbox').st-label__input
-                                                span.st-checkbox.st-label__checkbox
-                                                    i.st-checkbox__icon.icon-ok
-                                                | Я согласен на обработку персональных данных
-                                            button.st-button.st-button_shadow_off Оформить заказ
+                                            .step-box__next-box
+                                                button.st-button.st-button_w_125 Далее
 
 
 
 
-                            .section-sidebar__sidebar
-                                .total-price-box.js-total-price-box
-                                    .total-price-box__content
-                                        .total-price-box__title Внимание !
-                                        .total-price-box__gifts
-                                            .gifts-grid
-                                                .gifts-grid__item
+
+                                    .page-section__section
+                                        .step-box.st-box_border_yellow
+                                            .step-box__header.step-box__header_bot_line
+                                                .step-box__title-box
+                                                    span.step-box__number.circle-number 2
+                                                    span.step-box__title.st-title Выберите город и способ доставки
+
+                                                button.change-button
+                                                    p.change-button__text Изменить
+                                                    .change-button__circle
+                                                        i.change-button__icon.icon-ok
+
+
+                                            .form-price-grid
+                                                .form-price-grid__content
                                                     p
-                                                        | ПОДАРОК
-                                                        |
-                                                        a(href='#').st-link МШ-746
-                                                        |
-                                                        | при сумме разаказа
-                                                        |
-                                                        b 3 000 р.
+                                                        b СДЭК - Курьерская доставка (до двери
+                                                    p Воронеж, ул. Владимира Невского, 1
+                                                .form-price-grid__value 1265 руб.
 
-                                                .gifts-grid__item
-                                                    p
-                                                        | ПОДАРОК
-                                                        |
-                                                        a(href='#').st-link МШ-746
-                                                        |
-                                                        | при сумме разаказа
-                                                        |
-                                                        b 3 000 р.
-
-                                        .total-price-box__delivery-info
-                                            b СТОИМОСТЬ ДОСТАВКИ 350 р.
-
-                                    .total-price-box__footer Итого: 12 650 Руб.
+                                    .page-section__section
+                                        .step-box.st-box_border_yellow
+                                            .step-box__header.step-box__header_bot_line
+                                                .step-box__title-box
+                                                    span.step-box__number.circle-number 3
+                                                    span.step-box__title.st-title Подтверждение заказа
 
 
+                                            .step-box__content
+                                                .order-price-grid
+                                                    .order-price-grid__line
+                                                        .order-price-grid__content СДЭК - Курьерская доставка (до двери
+                                                        .order-price-grid__value 1265 руб.
+                                                    .order-price-grid__line
+                                                        .order-price-grid__content СДЭК - Курьерская доставка (до двери
+                                                        .order-price-grid__value 1265 руб.
+                                                    .order-price-grid__line.order-price-grid__line_total
+                                                        .order-price-grid__content Всего к оплате
+                                                        .order-price-grid__value 1265 руб.
 
 
-            include pug/components/footer
+                                            .step-box__footer
+                                                label.st-label
+                                                    input(type='checkbox').st-label__input
+                                                    span.st-checkbox.st-label__checkbox
+                                                        i.st-checkbox__icon.icon-ok
+                                                    | Я согласен на обработку персональных данных
+                                                button.st-button.st-button_shadow_off Оформить заказ
+
+
+                                    .page-section__section
+                                        .step-box.st-box_border_yellow
+                                            .step-box__header
+                                                .st-title Ваш заказ оформлен!
+                                                .step-box__close
+                                                    button.btn-close.btn-close_circle
+
+                                            .step-box__notice
+                                                .st-title.st-title_mb_12.st-title_fw_600 № Заказа 353434
+                                                .st-text.st-text_large_margin
+                                                    p Наш специалист свяжется с вам в течение 1 часа в рабочее время
+                                                    p Если вы отправили заявку в нерабочее время, то мы свяжемся с вами в ближайший рабочий день.
+                                                    p Мы работаем с 9:00 до 18:00 в будние дни по Московскому времени
+
+
+                                .section-sidebar__sidebar
+                                    .total-price-box.js-total-price-box
+                                        .total-price-box__content
+                                            .total-price-box__title Внимание !
+                                            .total-price-box__gifts
+                                                .gifts-grid
+                                                    .gifts-grid__item
+                                                        p
+                                                            | ПОДАРОК
+                                                            |
+                                                            a(href='#').st-link МШ-746
+                                                            |
+                                                            | при сумме разаказа
+                                                            |
+                                                            b 3 000 р.
+
+                                                    .gifts-grid__item
+                                                        p
+                                                            | ПОДАРОК
+                                                            |
+                                                            a(href='#').st-link МШ-746
+                                                            |
+                                                            | при сумме разаказа
+                                                            |
+                                                            b 3 000 р.
+
+                                            .total-price-box__delivery-info
+                                                b СТОИМОСТЬ ДОСТАВКИ 350 р.
+
+                                        .total-price-box__footer Итого: 12 650 Руб.
+
+
+
+
+                include pug/components/footer
 
         include pug/scripts.pug
         script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")

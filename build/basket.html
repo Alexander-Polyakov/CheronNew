@@ -31,7 +31,7 @@
           </div>
         </div>
         <div class="page-header__middle-section">
-          <div class="header-main-box">
+          <div class="header-main-box st--bg--gradient">
             <div class="header-main-box__content">
               <div class="header-main-box__small-section"><a class="logo" href="index.html"><span class="logo__icon">R</span><img class="logo__img" src="./images/icons/logo.svg" alt="Черон"><span class="logo__text">производственная компания</span></a></div>
               <div class="header-main-box__slogan">
@@ -196,7 +196,7 @@
                   </div>
                 </div>
               </li>
-              <li class="main-nav__item main-nav-item"><a class="main-nav-item__link" href="#"><span class="main-nav-item__link-text">Доставка и оплата</span></a></li>
+              <li class="main-nav__item main-nav-item"><a class="main-nav-item__link" href="delivery.html"><span class="main-nav-item__link-text">Доставка и оплата</span></a></li>
               <li class="main-nav__item main-nav-item"><a class="main-nav-item__link" href="shares.html"><span class="main-nav-item__link-text">Акции</span></a></li>
               <li class="main-nav__item main-nav-item"><a class="main-nav-item__link" href="reviews.html"><span class="main-nav-item__link-text">Отзывы о продукции</span></a></li>
               <li class="main-nav__item main-nav-item"><a class="main-nav-item__link" href="videos.html"><span class="main-nav-item__link-text">Видео инструкции</span></a></li>
@@ -205,10 +205,12 @@
           </div>
           <div class="page-header__search">
             <form class="search">
-              <input class="search__field js-search-header" type="text" placeholder="Поиск по сайту"><a class="search__button" href="#">
-                <div class="search__icon icon-ok"></div></a>
+              <input class="search__field js-search-header" type="text" placeholder="Поиск по сайту">
+              <button class="search__button"><i class="search__icon icon-search"></i></button>
             </form>
           </div>
+          <div class="page-header__mobile-search"><a class="mobile-search-link" href="#">
+              <div class="mobile-search-link__icon icon-search"></div></a></div>
         </div>
         <div class="page-header__mobile-section">
           <div class="page-header__hamburger">
@@ -230,7 +232,7 @@
             <div class="section-sidebar js-sidebar-parent">
               <div class="section-sidebar__main">
                 <div class="page-section__section">
-                  <div class="products-list">
+                  <div class="products-list products-list_card">
                     <div class="products-list__item">
                       <div class="products-list-item"><img class="products-list-item__image" src="./images/products/product1.jpg">
                         <div class="products-list-item__text">Мебельный кондуктор "угольник" шаг 25/50 диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30</div>
@@ -276,13 +278,11 @@
                   </div>
                 </div>
                 <div class="page-section__section page-section__section_mb_45">
-                  <div class="products-list__item">
-                    <div class="products-list__item">
-                      <div class="products-list-item"><img class="products-list-item__image" src="./images/products/product1.jpg">
-                        <div class="products-list-item__text">Мебельный кондуктор "угольник" шаг 25/50 диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30</div>
-                        <div class="products-list-item__gift">
-                          <div class="products-list-item__price">Подарок</div>
-                        </div>
+                  <div class="products-list products-list_card">
+                    <div class="products-list-item"><img class="products-list-item__image" src="./images/products/product1.jpg">
+                      <div class="products-list-item__text">Мебельный кондуктор "угольник" шаг 25/50 диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30</div>
+                      <div class="products-list-item__gift">
+                        <div class="products-list-item__price">Подарок</div>
                       </div>
                     </div>
                   </div>
@@ -609,6 +609,24 @@
                     </div>
                   </div>
                 </div>
+                <div class="page-section__section">
+                  <div class="step-box st-box_border_yellow">
+                    <div class="step-box__header">
+                      <div class="st-title">Ваш заказ оформлен!</div>
+                      <div class="step-box__close">
+                        <button class="btn-close btn-close_circle"></button>
+                      </div>
+                    </div>
+                    <div class="step-box__notice">
+                      <div class="st-title st-title_mb_12 st-title_fw_600">№ Заказа 353434</div>
+                      <div class="st-text st-text_large_margin">
+                        <p>Наш специалист свяжется с вам в течение 1 часа в рабочее время</p>
+                        <p>Если вы отправили заявку в нерабочее время, то мы свяжемся с вами в ближайший рабочий день.</p>
+                        <p>Мы работаем с 9:00 до 18:00 в будние дни по Московскому времени</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="section-sidebar__sidebar">
                 <div class="total-price-box js-total-price-box">
@@ -706,7 +724,12 @@
           <li class="main-nav__item main-nav-item"><a class="main-nav-item__link" href="promo.html"><span class="main-nav-item__link-text">Промо</span></a></li>
           <li class="main-nav__item main-nav-item"><a class="main-nav-item__link" href="basket.html"><span class="main-nav-item__link-text">Корзина</span></a></li>
           <li class="main-nav__item main-nav-item"><a class="main-nav-item__link" href="index.html"><span class="main-nav-item__link-text">Главная</span></a></li>
-          <li class="main-nav__item main-nav-item"><a class="main-nav-item__link" href="#"><span class="main-nav-item__link-text">Продукция Черон</span></a></li>
+          <li class="main-nav__item main-nav-item">
+            <button class="main-nav-item__toggle js-toggle-dropmenu"></button><a class="main-nav-item__link" href="#"><span class="main-nav-item__link-text">Продукция Черон</span></a>
+            <div class="main-nav-item__dropmenu">
+              <div class="main-nav-dropmenu"><a class="main-nav-dropmenu__header-item" href="#">Кондукторы и шаблоны</a><a class="main-nav-dropmenu__header-item" href="#">Для мебельного производства</a><a class="main-nav-dropmenu__header-item" href="#">Оборудование Черон</a></div>
+            </div>
+          </li>
           <li class="main-nav__item main-nav-item"><a class="main-nav-item__link" href="#"><span class="main-nav-item__link-text">Доставка и оплата</span></a></li>
           <li class="main-nav__item main-nav-item"><a class="main-nav-item__link" href="shares.html"><span class="main-nav-item__link-text">Акции</span></a></li>
           <li class="main-nav__item main-nav-item"><a class="main-nav-item__link" href="reviews.html"><span class="main-nav-item__link-text">Отзывы о продукции</span></a></li>
@@ -716,8 +739,8 @@
       </div>
       <div class="page__overlay js-popups-overlay js-close-popups js-page-menu-close"></div>
       <div class="page__popups popups js-popups">
-        <div class="popups__popups-wrapper">
-          <div class="popups__popup popup" data-popup-name="city">
+        <div class="popups__popup" data-popup-name="city">
+          <div class="popup">
             <div class="popup__close">
               <button class="btn-close btn-close_circle js-close-popups"></button>
             </div>
@@ -746,7 +769,45 @@
               <button class="st-button">Запомнить выбор</button>
             </div>
           </div>
-          <div class="popups__popup popup popup_video" data-popup-name="video">
+        </div>
+        <div class="popups__popup" data-popup-name="city2">
+          <div class="popup">
+            <div class="popup__close">
+              <button class="btn-close btn-close_circle js-close-popups"></button>
+            </div>
+            <div class="popup__header popup__header_border">
+              <div class="popup__title">
+                <div class="st-title">Выберите город</div>
+              </div>
+              <p>Не нашли своего города - оформите заказ через интернет магазин</p>
+            </div>
+            <div class="popup__content">
+              <div class="st-form">
+                <div class="st-form__line">
+                  <ul class="nav-list nav-list_cities">
+                    <li class="nav-list__item"><b>А</b></li>
+                    <li class="nav-list__item"><a class="st-link" href="#">Москва</a></li>
+                    <li class="nav-list__item"><a class="st-link" href="#">Санкт-Петербург</a></li>
+                    <li class="nav-list__item"><a class="st-link" href="#">Нижний Новгород</a></li>
+                    <li class="nav-list__item"><a class="st-link" href="#">Хабаровск</a></li>
+                    <li class="nav-list__item"><b>Б</b></li>
+                    <li class="nav-list__item"><a class="st-link" href="#">Ростов-на-Дону</a></li>
+                    <li class="nav-list__item"><a class="st-link" href="#">Набережные Челны</a></li>
+                    <li class="nav-list__item"><a class="st-link" href="#">Москва</a></li>
+                    <li class="nav-list__item"><a class="st-link" href="#">Санкт-Петербург</a></li>
+                    <li class="nav-list__item"><b>С</b></li>
+                    <li class="nav-list__item"><a class="st-link" href="#">Нижний Новгород</a></li>
+                    <li class="nav-list__item"><a class="st-link" href="#">Хабаровск</a></li>
+                    <li class="nav-list__item"><a class="st-link" href="#">Ростов-на-Дону</a></li>
+                    <li class="nav-list__item"><a class="st-link" href="#">Набережные Челны</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="popups__popup" data-popup-name="video">
+          <div class="popup popup_video">
             <div class="popup__close">
               <button class="btn-close btn-close_circle js-close-popups"></button>
             </div>
@@ -756,7 +817,9 @@
               </div>
             </div>
           </div>
-          <div class="popups__popup popups__popup_w_580 popup" data-popup-name="product">
+        </div>
+        <div class="popups__popup" data-popup-name="product">
+          <div class="popup popup_w_580">
             <div class="popup__close">
               <button class="btn-close btn-close_circle js-close-popups"></button>
             </div>
@@ -774,6 +837,37 @@
             </div>
             <div class="popup__footer"><span class="st-link st-link_tdn js-close-popups">Продолжить покупки</span>
               <button class="st-button">Оформить заказ</button>
+            </div>
+          </div>
+        </div>
+        <div class="popups__popup" data-popup-name="calc">
+          <div class="popup popup_w_580">
+            <div class="popup__close">
+              <button class="btn-close btn-close_circle js-close-popups"></button>
+            </div>
+            <div class="popup__header popup__header_border">
+              <div class="st-title">Заявка на расчет стоимость</div>
+            </div>
+            <div class="popup__content">
+              <form class="st-form">
+                <div class="st-form__line">
+                  <input class="input" type="text" placeholder="Ваше имя *" required>
+                </div>
+                <div class="st-form__line">
+                  <input class="input" type="text" placeholder="Телефон *" required>
+                </div>
+                <div class="st-form__line">
+                  <textarea class="textarea textarea_h_80" placeholder="Комментраий" required></textarea>
+                </div>
+                <div class="st-form__line st-form__line_bg_gray st-form__line_p_20">
+                  <label class="st-label">
+                    <input class="st-label__input" type="checkbox"><span class="st-checkbox st-label__checkbox"><i class="st-checkbox__icon icon-ok"></i></span>Я согласен на обработку персональных данных
+                  </label>
+                </div>
+                <div class="st-form__line tac">
+                  <button class="st-button st-button_large st-button_shadow_off">Расчет стоимости</button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
