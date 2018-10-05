@@ -104,7 +104,7 @@ body
 .page-menu
     &__header
         position: relative
-        padding: 5px 50px 5px 5px
+        padding: 10px 50px 10px 10px
     &__close
         position: absolute
         right: 10px
@@ -641,9 +641,6 @@ body
         .products-list__item
             border-bottom: 1px solid $lightGray
             margin-bottom: 0
-    &_card
-        .products-list-item
-            flex-wrap: wrap
 
 
 .products-list-item
@@ -652,6 +649,17 @@ body
     align-items: center
     justify-content: space-between
     border: 1px solid $darkGray
+    position: relative
+    &_basket
+        padding-right: 50px
+        .products-list-item__text
+            width: auto
+            flex-shrink: 1
+        .products-list-item__close
+            position: absolute
+            top: 50%
+            right: 5px
+            transform: translateY(-50%)
     &_single
         padding: 10px 0
         border: none
@@ -676,8 +684,10 @@ body
         text-transform: uppercase
     &__counter
         padding: 5px 10px
-    &__price-box
         width: 150px
+        flex-shrink: 0
+    &__price-box
+        width: 140px
         flex-shrink: 0
         padding: 5px 10px
     &__price
@@ -918,7 +928,7 @@ body
             height: 10px
             position: absolute
             top: 50%
-            right: 5px
+            right: 10px
             margin-top: -6px
             border-top: 2px solid #333
             border-right: 2px solid #333
@@ -928,9 +938,11 @@ body
             right: auto
             border-left: none
             border-right: 1px solid #333
+            width: 30px
+            padding: 0
             &:after
                 right: auto
-                left: 5px
+                left: 10px
                 transform: rotate(-135deg)
         &:hover
             background-color: $yellow
@@ -2646,9 +2658,6 @@ a.nav-list-item_color_yellow:hover
     .main-nav
         justify-content: space-between
 
-    .main-nav-item__link
-        padding: 12px 5px
-
     .header-basket
         &__tablet-link
             display: block
@@ -2720,13 +2729,25 @@ a.nav-list-item_color_yellow:hover
 
 
 @media screen and (max-width: 768px)
+    .products-list-item_basket
+        flex-wrap: wrap
+
+    .search
+        &__field
+            border: none
+            border-radius: 5px
+
     .nav-list_cities
         column-count: 2
 
     .main-nav-item
+        &__link
+            font-weight: 600
+            font-size: 16px
+            padding: 12px 10px
         &__title-box
             position: relative
-            padding-left: 80px
+            padding-left: 30px
             text-align: center
             border-bottom: 1px solid #333
             border-top: 1px solid #333
