@@ -199,12 +199,12 @@ header.page-header
         .page-header__search
             form.search
                 input(type='text' placeholder='Поиск по сайту').search__field.js-search-header
-                button.search__button
-                    i.search__icon.icon-search
+                .search__button
+                    .btn-close.js-toggle-search
 
-        .page-header__mobile-search
-            a(href='#').mobile-search-link
-                .mobile-search-link__icon.icon-search
+        .page-header__search-open-btn
+            button.search-link.js-toggle-search
+                .search-link__icon.icon-search
 
 
     .page-header__mobile-section

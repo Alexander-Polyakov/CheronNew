@@ -220,8 +220,8 @@ $(document).ready(function() {
 
     $(".js-dropmenu-toggle").click(function (e) {
         e.preventDefault();
-        $(this).closest(".js-dropmenu").toggleClass('opened');
-        $(this).closest(".js-dropmenu").find(".main-nav-item__dropmenu").slideToggle('400');
+        $(this).closest(".main-nav").toggleClass('dropmenu-opened');
+        // $(this).closest(".js-dropmenu").find(".main-nav-item__dropmenu").slideToggle('400');
     });
 
 
@@ -270,11 +270,11 @@ $(document).ready(function() {
         $(this).addClass("active");
     });
 
-    $(".js-toggle-dropmenu").click(function(){
-        var item = $(this).closest('.main-nav-item');
-        item.toggleClass('opened');
-        item.find(".main-nav-item__dropmenu").stop().slideToggle(400);
-    });
+    // $(".js-toggle-dropmenu").click(function(){
+    //     var item = $(this).closest('.main-nav-item');
+    //     item.toggleClass('opened');
+    //     item.find(".main-nav-item__dropmenu").stop().slideToggle(400);
+    // });
 
     $('.js-counter').each(function(){
         var _this = $(this),
@@ -331,40 +331,48 @@ $(document).ready(function() {
 
 
 
-    $( function() {
-        var availableTags = [
-            "ActionScript",
-            "AppleScript",
-            "Asp",
-            "BASIC",
-            "C",
-            "C++",
-            "Clojure",
-            "COBOL",
-            "ColdFusion",
-            "Erlang",
-            "Fortran",
-            "Groovy",
-            "Haskell",
-            "Java",
-            "JavaScript",
-            "Lisp",
-            "Perl",
-            "PHP",
-            "Python",
-            "Ruby",
-            "Scala",
-            "Scheme"
-        ];
-        $( ".js-search-header" ).autocomplete({
-            source: availableTags,
-            classes: {
-                "ui-autocomplete": "search-autocomplete"
-            }
-        });
-    } );
+    var products = [
+        {
+            value: "Мебельный кондуктор \"угольник\" шаг 25/50 диаметр втулки 7мм. Можно ставить шканты",
+            image: "./images/examples/closet.jpg",
+            link: "/product-card.html"
+        },
+        {
+            value: "Мебельный кондуктор \"угольник\" шаг 25/50 диаметр втулки 7мм. Можно ставить шканты",
+            image: "./images/examples/closet.jpg",
+            link: "/product-card.html"
+        },
+        {
+            value: "Мебельный кондуктор \"угольник\" шаг 25/50 диаметр втулки 7мм. Можно ставить шканты",
+            image: "./images/examples/closet.jpg",
+            link: "/product-card.html"
+        },
+        {
+            value: "Мебельный кондуктор \"угольник\" шаг 25/50 диаметр втулки 7мм. Можно ставить шканты",
+            image: "./images/examples/closet.jpg",
+            link: "/product-card.html"
+        },
+        {
+            value: "Мебельный кондуктор \"угольник\" шаг 25/50 диаметр втулки 7мм. Можно ставить шканты",
+            image: "./images/examples/closet.jpg",
+            link: "/product-card.html"
+        },
+        {
+            value: "Мебельный кондуктор \"угольник\" шаг 25/50 диаметр втулки 7мм. Можно ставить шканты",
+            image: "./images/examples/closet.jpg",
+            link: "/product-card.html"
+        }
+    ];
 
-
+    $( ".js-search-header" ).autocomplete({
+        minLength: 0,
+        source: products
+    }).data( "ui-autocomplete" )._renderItem = function( ul, item ) {
+        return $( "<li>" )
+            .data( "ui-autocomplete-item", item )
+            .append( "<a href="+item.link+"> <img src="+item.image+"><br>" + item.value + "</a>" )
+            .appendTo( ul );
+    };
 
 
     var sidebarParent = $(".js-sidebar-parent");
@@ -393,6 +401,9 @@ $(document).ready(function() {
 
 
 
+    $(".js-toggle-search").click(function () {
+       $(".page-header").toggleClass("search-opened");
+    });
 
 
 });

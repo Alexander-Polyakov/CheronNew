@@ -206,11 +206,16 @@
           <div class="page-header__search">
             <form class="search">
               <input class="search__field js-search-header" type="text" placeholder="Поиск по сайту">
-              <button class="search__button"><i class="search__icon icon-search"></i></button>
+              <div class="search__button">
+                <div class="btn-close js-toggle-search"></div>
+              </div>
             </form>
           </div>
-          <div class="page-header__mobile-search"><a class="mobile-search-link" href="#">
-              <div class="mobile-search-link__icon icon-search"></div></a></div>
+          <div class="page-header__search-open-btn">
+            <button class="search-link js-toggle-search">
+              <div class="search-link__icon icon-search"></div>
+            </button>
+          </div>
         </div>
         <div class="page-header__mobile-section">
           <div class="page-header__hamburger">
@@ -763,9 +768,19 @@
           <div class="page-footer__copy">&copy; 2000-2018 ЧЕРОН</div><a class="st-link st-link_tdn" href="#">Создание сайта</a>
         </div>
       </div>
-      <div class="page__menu js-page-menu st--bg--gradient">
-        <div class="page__menu-close">
-          <button class="btn-close js-page-menu-close"></button>
+      <div class="page__menu page-menu js-page-menu st--bg--gradient">
+        <div class="page-menu__header">
+          <div class="page-menu__search">
+            <form class="search">
+              <input class="search__field js-search-header" type="text" placeholder="Поиск по сайту">
+              <div class="search__button">
+                <div class="icon-search"></div>
+              </div>
+            </form>
+          </div>
+          <div class="page-menu__close">
+            <button class="btn-close js-page-menu-close"></button>
+          </div>
         </div>
         <ul class="main-nav">
           <li class="main-nav__item main-nav-item"><a class="main-nav-item__link" href="company.html"><span class="main-nav-item__link-text">О компании</span></a></li>
@@ -775,9 +790,16 @@
           <li class="main-nav__item main-nav-item"><a class="main-nav-item__link" href="basket.html"><span class="main-nav-item__link-text">Корзина</span></a></li>
           <li class="main-nav__item main-nav-item"><a class="main-nav-item__link" href="index.html"><span class="main-nav-item__link-text">Главная</span></a></li>
           <li class="main-nav__item main-nav-item">
-            <button class="main-nav-item__toggle js-toggle-dropmenu"></button><a class="main-nav-item__link" href="#"><span class="main-nav-item__link-text">Продукция Черон</span></a>
+            <div class="main-nav-item__link-box"><a class="main-nav-item__link" href="#"><span class="main-nav-item__link-text">Продукция Черон</span></a>
+              <button class="main-nav-item__toggle js-dropmenu-toggle">3</button>
+            </div>
             <div class="main-nav-item__dropmenu">
-              <div class="main-nav-dropmenu"><a class="main-nav-dropmenu__header-item" href="#">Кондукторы и шаблоны</a><a class="main-nav-dropmenu__header-item" href="#">Для мебельного производства</a><a class="main-nav-dropmenu__header-item" href="#">Оборудование Черон</a></div>
+              <div class="main-nav-item__title-box">
+                <button class="main-nav-item__toggle main-nav-item__toggle_prev js-dropmenu-toggle"></button><a class="main-nav-item__link tac" href="#"><span class="main-nav-item__link-text">Продукция Черон</span></a>
+              </div>
+              <div class="main-nav__item"><a class="main-nav-item__link" href="index.html"><span class="main-nav-item__link-text">Кондукторы и шаблоны</span></a></div>
+              <div class="main-nav__item"><a class="main-nav-item__link" href="index.html"><span class="main-nav-item__link-text">Для мебельного производства</span></a></div>
+              <div class="main-nav__item"><a class="main-nav-item__link" href="index.html"><span class="main-nav-item__link-text">Оборудование Черон</span></a></div>
             </div>
           </li>
           <li class="main-nav__item main-nav-item"><a class="main-nav-item__link" href="#"><span class="main-nav-item__link-text">Доставка и оплата</span></a></li>

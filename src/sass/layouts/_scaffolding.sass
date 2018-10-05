@@ -69,22 +69,17 @@ body
     &__main
         flex: 1
     &__menu
-        position: absolute
+        position: fixed
+        overflow: hidden
         overflow-y: auto
         left: -100%
         top: 0
         height: 100%
         width: 320px
-        padding-top: 40px
         z-index: 1500
         transition: all 0.5s ease 0s
         &.opened
             left: 0
-    &__menu-close
-        position: absolute
-        right: 10px
-        top: 10px
-        z-index: 30
     &__popups
         left: 0
         width: 100%
@@ -104,6 +99,18 @@ body
         z-index: 1000
         background-color: #e9e9e9
         opacity: 0.8
+
+
+.page-menu
+    &__header
+        position: relative
+        padding: 5px 50px 5px 5px
+    &__close
+        position: absolute
+        right: 10px
+        top: 50%
+        transform: translateY(-50%)
+        z-index: 30
 
 .popups
     &__popup
@@ -792,24 +799,23 @@ body
 
 .search
     position: relative
-    width: 250px
     &__field
         width: 100%
-        height: 30px
+        height: 38px
         background-color: #fff
-        border: 1px solid #333
+        border: 1px solid $gray
         padding: 0 10px
     &__button
         position: absolute
-        font-size: 20px
         top: 50%
         right: 10px
-        margin-top: -12px
+        transform: translateY(-50%)
         color: inherit
         outline: none
         border: none
         background-color: inherit
         cursor: pointer
+        font-size: 18px
 
 
 
@@ -837,14 +843,49 @@ body
     &__mobile-section
         display: none
         padding: 10px 0
-    &__mobile-search
-        display: none
+    &__search
+        position: absolute
+        left: 0
+        right: 0
+        top: 0
+        transition: opacity 0.5s ease 0s
+        opacity: 0
+        pointer-events: none
+        z-index: 20
     &__address
         width: 230px
         flex-shrink: 0
     &__mobile-title
         font-size: 16px
         font-weight: 600
+    &.search-opened
+        .page-header__search
+            opacity: 1
+            pointer-events: auto
+
+.ui-autocomplete
+    height: 300px
+    overflow: hidden
+    overflow-y: auto
+
+.ui-menu-item-wrapper
+    display: flex
+    align-items: center
+    border-bottom: 1px solid $lightGray
+    text-decoration: none
+    img
+        width: 100px
+        flex-shrink: 0
+        margin-right: 15px
+
+
+.search-link
+    display: inline-block
+    outline: none
+    cursor: pointer
+    border: none
+    font-size: 22px
+    color: inherit
 
 .main-nav
     display: flex
@@ -853,39 +894,47 @@ body
 
 
 .main-nav-item
-    &.opened
-        .main-nav-item__toggle
-            &:after
-                display: none
     &__toggle
         position: absolute
-        height: 26px 
-        width: 26px 
+        right: 0
+        top: 0
+        display: flex
+        align-items: center
+        justify-content: flex-end
+        width: 80px
+        height: 100%
         border: none
-        right: 12px
-        top: 8px
         outline: none
         background-color: inherit
         cursor: pointer
-        &:before
-            content: ''
-            width: 100%
-            position: absolute
-            left: 0
-            height: 2px
-            top: 50%
-            margin-top: -1px
-            border-radius: 10px
-            background-color: #000 
+        padding-right: 30px
+        border-left: 1px solid #333
+        font-family: "Roboto", Arial,sans-serif
+        font-weight: 600
+        font-size: 16px
         &:after
             content: ''
-            height: 100%
+            width: 10px
+            height: 10px
             position: absolute
-            top: 0
-            width: 2px
-            left: 50%
-            border-radius: 10px
-            background-color: #000
+            top: 50%
+            right: 5px
+            margin-top: -6px
+            border-top: 2px solid #333
+            border-right: 2px solid #333
+            transform: rotate(45deg)
+        &_prev
+            left: 0
+            right: auto
+            border-left: none
+            border-right: 1px solid #333
+            &:after
+                right: auto
+                left: 5px
+                transform: rotate(-135deg)
+        &:hover
+            background-color: $yellow
+
     &__link
         color: inherit
         display: flex
@@ -893,6 +942,8 @@ body
         text-decoration: none
         transition: all 0.5s ease 0s
         padding: 12px 8px
+        &.tac
+            justify-content: center
         &:hover
             text-decoration: underline
     &__dropmenu
@@ -905,10 +956,11 @@ body
         left: 0
         width: 100%
     &:hover
-        .main-nav-item__dropmenu
-            opacity: 1
-            pointer-events: auto
-            top: 100%
+        @media screen and (min-width: 768px)
+            .main-nav-item__dropmenu
+                opacity: 1
+                pointer-events: auto
+                top: 100%
     &_dropmenu
         .main-nav-item__link
             position: relative
@@ -2554,10 +2606,6 @@ a.nav-list-item_color_yellow:hover
     .page-header__bottom-nav
         font-size: 12px
 
-    .search
-        width: 200px
-
-
     .promo-slider
         padding: 0 40px
         .owl-nav button.owl-next
@@ -2676,36 +2724,34 @@ a.nav-list-item_color_yellow:hover
         column-count: 2
 
     .main-nav-item
-        position: relative
+        &__title-box
+            position: relative
+            padding-left: 80px
+            text-align: center
+            border-bottom: 1px solid #333
+            border-top: 1px solid #333
+        &__link-box
+            position: relative
         &__dropmenu
-            position: static
+            position: absolute
+            left: 100%
+            top: 0
             opacity: 1
             pointer-events: auto
-            display: none
             transition: none
             background: inherit
-            border-top: 1px solid #333
-    .main-nav-dropmenu
-        border: none
-        background-color: inherit
-        &__header-item
-            padding: 8px 5px
-            width: 100%
-            display: block
-            color: inherit
-            text-decoration: none
-            border-bottom: 1px solid #333
-            padding-left: 15px
-            &:last-child
-                border-bottom: none
 
-    .page__menu
-        .main-nav
-            display: block
-            &__item
-                border-bottom: 1px solid #333
-                &:last-child
-                    border-bottom: none 
+    .main-nav
+        display: block
+        position: relative
+        transition: all 0.5s ease 0s
+        left: 0
+        &.dropmenu-opened
+            left: -100%
+        &__item
+            border-bottom: 1px solid #333
+            &:first-child
+                border-top: 1px solid #333
 
 
     .page-footer__bottom-section

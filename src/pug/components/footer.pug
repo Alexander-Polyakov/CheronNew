@@ -62,9 +62,15 @@
 
 
 
-.page__menu.js-page-menu.st--bg--gradient
-    .page__menu-close
-        button.btn-close.js-page-menu-close
+.page__menu.page-menu.js-page-menu.st--bg--gradient
+    .page-menu__header
+        .page-menu__search
+            form.search
+                input(type='text' placeholder='Поиск по сайту').search__field.js-search-header
+                .search__button
+                    .icon-search
+        .page-menu__close
+            button.btn-close.js-page-menu-close
 
     ul.main-nav
         li.main-nav__item.main-nav-item
@@ -87,14 +93,24 @@
             a(href='index.html').main-nav-item__link
                 span.main-nav-item__link-text Главная
         li.main-nav__item.main-nav-item
-            button.main-nav-item__toggle.js-toggle-dropmenu
-            a(href='#').main-nav-item__link
-                span.main-nav-item__link-text Продукция Черон
+            .main-nav-item__link-box
+                a(href='#').main-nav-item__link
+                    span.main-nav-item__link-text Продукция Черон
+                button.main-nav-item__toggle.js-dropmenu-toggle 3
             .main-nav-item__dropmenu
-                .main-nav-dropmenu
-                    a(href='#').main-nav-dropmenu__header-item Кондукторы и шаблоны
-                    a(href='#').main-nav-dropmenu__header-item Для мебельного производства
-                    a(href='#').main-nav-dropmenu__header-item Оборудование Черон
+                .main-nav-item__title-box
+                    button.main-nav-item__toggle.main-nav-item__toggle_prev.js-dropmenu-toggle
+                    a(href='#').main-nav-item__link.tac
+                        span.main-nav-item__link-text Продукция Черон
+                .main-nav__item
+                    a(href='index.html').main-nav-item__link
+                        span.main-nav-item__link-text Кондукторы и шаблоны
+                .main-nav__item
+                    a(href='index.html').main-nav-item__link
+                        span.main-nav-item__link-text Для мебельного производства
+                .main-nav__item
+                    a(href='index.html').main-nav-item__link
+                        span.main-nav-item__link-text Оборудование Черон
         li.main-nav__item.main-nav-item
             a(href='#').main-nav-item__link
                 span.main-nav-item__link-text Доставка и оплата
