@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/fontello.css">
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   </head>
   <body>
     <div class="page container">
@@ -212,14 +212,12 @@
             </form>
           </div>
           <div class="page-header__search-open-btn">
-            <button class="search-link js-toggle-search">
-              <div class="search-link__icon icon-search"></div>
-            </button>
+            <button class="search-link js-toggle-search"><i class="search-link__icon icon-search"></i></button>
           </div>
         </div>
         <div class="page-header__mobile-section">
           <div class="page-header__hamburger">
-            <button class="hamburger js-page-menu-open"><i class="hamburger__line hamburger__line_top"></i><i class="hamburger__line"></i><i class="hamburger__line hamburger__line_bottom"></i></button>
+            <div class="hamburger js-page-menu-open"><i class="hamburger__line hamburger__line_top"></i><i class="hamburger__line"></i><i class="hamburger__line hamburger__line_bottom"></i></div>
           </div>
           <div class="page-header__mobile-title">интернет-магазин</div>
           <div class="page-header__mobile-basket"><a class="basket-circle" href="#"><i class="basket-circle__icon icon-basket"></i></a></div>
@@ -235,7 +233,8 @@
               <div class="product-page-header__title">
                 <h1 class="st-title ttu">Мебельный кондуктор MK-02</h1>
               </div>
-              <div class="product-page-header__share"><a class="icon-button icon-button_dropdown" href="#"><i class="icon-button__icon icon-share"></i>Поделиться
+              <div class="product-page-header__share">
+                <div class="icon-button icon-button_dropdown"><i class="icon-button__icon icon-share"></i>Поделиться
                   <div class="icon-button__dropdown">
                     <div class="icon-button__dropdown-content">
                       <div class="share-box">
@@ -249,7 +248,9 @@
                         </div>
                       </div>
                     </div>
-                  </div></a></div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="page-section__section">
@@ -304,7 +305,10 @@
               <div class="toggle-content__nav">
                 <div class="toggle-content__button">о товаре</div>
                 <div class="toggle-content__button">видео-инструкция</div>
-                <div class="toggle-content__button active">отзывы</div>
+                <div class="toggle-content__button active">
+                  отзывы
+                  <span class="toggle-content__button-value">( 3 )</span>
+                </div>
               </div>
               <div class="toggle-content__content">
                 <div class="toggle-content__content-item">
@@ -405,18 +409,22 @@
                     <div class="icon-youtube-play"></div>
                   </div>
                 </header>
-                <div class="product-item__image-box">
-                  <div class="proportional-box"><img class="proportional-box__image" src="./images/examples/closet.jpg"></div>
-                </div>
-                <div class="product-item__section">
-                  <div class="product-item__descr">Мебельный кондуктор система "32" диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30</div>
-                </div>
-                <div class="product-item__section">
-                  <div class="product-item__price-grid"><span class="product-item__price-text">1 670 руб.</span>
-                    <div class="product-item__price-button"><a class="st-button js-open-popup" href="#" data-target-popup="product">купить</a></div>
+                <div class="product-item__main">
+                  <div class="product-item__image-box">
+                    <div class="proportional-box"><img class="proportional-box__image" src="./images/examples/closet.jpg"></div>
+                  </div>
+                  <div class="product-item__section">
+                    <div class="product-item__descr">Мебельный кондуктор система "32" диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30</div>
                   </div>
                 </div>
-                <div class="product-item__section tac"><a class="st-link" href="product-card.html">Подробнее</a></div>
+                <div class="product-item__footer">
+                  <div class="product-item__section">
+                    <div class="product-item__price-grid"><span class="product-item__price-text">1 670 руб.</span>
+                      <div class="product-item__price-button"><a class="st-button js-open-popup" href="#" data-target-popup="product">купить</a></div>
+                    </div>
+                  </div>
+                  <div class="product-item__section tac"><a class="st-link" href="product-card.html">Подробнее</a></div>
+                </div>
               </article>
               <article class="product-item">
                 <header class="product-item__header">
@@ -425,18 +433,22 @@
                     <div class="icon-youtube-play"></div>
                   </div>
                 </header>
-                <div class="product-item__image-box">
-                  <div class="proportional-box"><img class="proportional-box__image" src="./images/examples/closet.jpg"></div>
-                </div>
-                <div class="product-item__section">
-                  <div class="product-item__descr">Мебельный кондуктор система "32" диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30</div>
-                </div>
-                <div class="product-item__section">
-                  <div class="product-item__price-grid"><span class="product-item__price-text">1 670 руб.</span>
-                    <div class="product-item__price-button"><a class="st-button js-open-popup" href="#" data-target-popup="product">купить</a></div>
+                <div class="product-item__main">
+                  <div class="product-item__image-box">
+                    <div class="proportional-box"><img class="proportional-box__image" src="./images/examples/closet.jpg"></div>
+                  </div>
+                  <div class="product-item__section">
+                    <div class="product-item__descr">Мебельный кондуктор система "32" диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30</div>
                   </div>
                 </div>
-                <div class="product-item__section tac"><a class="st-link" href="product-card.html">Подробнее</a></div>
+                <div class="product-item__footer">
+                  <div class="product-item__section">
+                    <div class="product-item__price-grid"><span class="product-item__price-text">1 670 руб.</span>
+                      <div class="product-item__price-button"><a class="st-button js-open-popup" href="#" data-target-popup="product">купить</a></div>
+                    </div>
+                  </div>
+                  <div class="product-item__section tac"><a class="st-link" href="product-card.html">Подробнее</a></div>
+                </div>
               </article>
               <article class="product-item">
                 <header class="product-item__header">
@@ -445,18 +457,22 @@
                     <div class="icon-youtube-play"></div>
                   </div>
                 </header>
-                <div class="product-item__image-box">
-                  <div class="proportional-box"><img class="proportional-box__image" src="./images/examples/closet.jpg"></div>
-                </div>
-                <div class="product-item__section">
-                  <div class="product-item__descr">Мебельный кондуктор система "32" диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30</div>
-                </div>
-                <div class="product-item__section">
-                  <div class="product-item__price-grid"><span class="product-item__price-text">1 670 руб.</span>
-                    <div class="product-item__price-button"><a class="st-button js-open-popup" href="#" data-target-popup="product">купить</a></div>
+                <div class="product-item__main">
+                  <div class="product-item__image-box">
+                    <div class="proportional-box"><img class="proportional-box__image" src="./images/examples/closet.jpg"></div>
+                  </div>
+                  <div class="product-item__section">
+                    <div class="product-item__descr">Мебельный кондуктор система "32" диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30</div>
                   </div>
                 </div>
-                <div class="product-item__section tac"><a class="st-link" href="product-card.html">Подробнее</a></div>
+                <div class="product-item__footer">
+                  <div class="product-item__section">
+                    <div class="product-item__price-grid"><span class="product-item__price-text">1 670 руб.</span>
+                      <div class="product-item__price-button"><a class="st-button js-open-popup" href="#" data-target-popup="product">купить</a></div>
+                    </div>
+                  </div>
+                  <div class="product-item__section tac"><a class="st-link" href="product-card.html">Подробнее</a></div>
+                </div>
               </article>
               <article class="product-item">
                 <header class="product-item__header">
@@ -465,18 +481,22 @@
                     <div class="icon-youtube-play"></div>
                   </div>
                 </header>
-                <div class="product-item__image-box">
-                  <div class="proportional-box"><img class="proportional-box__image" src="./images/examples/closet.jpg"></div>
-                </div>
-                <div class="product-item__section">
-                  <div class="product-item__descr">Мебельный кондуктор система "32" диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30</div>
-                </div>
-                <div class="product-item__section">
-                  <div class="product-item__price-grid"><span class="product-item__price-text">1 670 руб.</span>
-                    <div class="product-item__price-button"><a class="st-button js-open-popup" href="#" data-target-popup="product">купить</a></div>
+                <div class="product-item__main">
+                  <div class="product-item__image-box">
+                    <div class="proportional-box"><img class="proportional-box__image" src="./images/examples/closet.jpg"></div>
+                  </div>
+                  <div class="product-item__section">
+                    <div class="product-item__descr">Мебельный кондуктор система "32" диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30</div>
                   </div>
                 </div>
-                <div class="product-item__section tac"><a class="st-link" href="product-card.html">Подробнее</a></div>
+                <div class="product-item__footer">
+                  <div class="product-item__section">
+                    <div class="product-item__price-grid"><span class="product-item__price-text">1 670 руб.</span>
+                      <div class="product-item__price-button"><a class="st-button js-open-popup" href="#" data-target-popup="product">купить</a></div>
+                    </div>
+                  </div>
+                  <div class="product-item__section tac"><a class="st-link" href="product-card.html">Подробнее</a></div>
+                </div>
               </article>
               <article class="product-item">
                 <header class="product-item__header">
@@ -485,18 +505,22 @@
                     <div class="icon-youtube-play"></div>
                   </div>
                 </header>
-                <div class="product-item__image-box">
-                  <div class="proportional-box"><img class="proportional-box__image" src="./images/examples/closet.jpg"></div>
-                </div>
-                <div class="product-item__section">
-                  <div class="product-item__descr">Мебельный кондуктор система "32" диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30</div>
-                </div>
-                <div class="product-item__section">
-                  <div class="product-item__price-grid"><span class="product-item__price-text">1 670 руб.</span>
-                    <div class="product-item__price-button"><a class="st-button js-open-popup" href="#" data-target-popup="product">купить</a></div>
+                <div class="product-item__main">
+                  <div class="product-item__image-box">
+                    <div class="proportional-box"><img class="proportional-box__image" src="./images/examples/closet.jpg"></div>
+                  </div>
+                  <div class="product-item__section">
+                    <div class="product-item__descr">Мебельный кондуктор система "32" диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30</div>
                   </div>
                 </div>
-                <div class="product-item__section tac"><a class="st-link" href="product-card.html">Подробнее</a></div>
+                <div class="product-item__footer">
+                  <div class="product-item__section">
+                    <div class="product-item__price-grid"><span class="product-item__price-text">1 670 руб.</span>
+                      <div class="product-item__price-button"><a class="st-button js-open-popup" href="#" data-target-popup="product">купить</a></div>
+                    </div>
+                  </div>
+                  <div class="product-item__section tac"><a class="st-link" href="product-card.html">Подробнее</a></div>
+                </div>
               </article>
               <article class="product-item">
                 <header class="product-item__header">
@@ -505,18 +529,22 @@
                     <div class="icon-youtube-play"></div>
                   </div>
                 </header>
-                <div class="product-item__image-box">
-                  <div class="proportional-box"><img class="proportional-box__image" src="./images/examples/closet.jpg"></div>
-                </div>
-                <div class="product-item__section">
-                  <div class="product-item__descr">Мебельный кондуктор система "32" диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30</div>
-                </div>
-                <div class="product-item__section">
-                  <div class="product-item__price-grid"><span class="product-item__price-text">1 670 руб.</span>
-                    <div class="product-item__price-button"><a class="st-button js-open-popup" href="#" data-target-popup="product">купить</a></div>
+                <div class="product-item__main">
+                  <div class="product-item__image-box">
+                    <div class="proportional-box"><img class="proportional-box__image" src="./images/examples/closet.jpg"></div>
+                  </div>
+                  <div class="product-item__section">
+                    <div class="product-item__descr">Мебельный кондуктор система "32" диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30</div>
                   </div>
                 </div>
-                <div class="product-item__section tac"><a class="st-link" href="product-card.html">Подробнее</a></div>
+                <div class="product-item__footer">
+                  <div class="product-item__section">
+                    <div class="product-item__price-grid"><span class="product-item__price-text">1 670 руб.</span>
+                      <div class="product-item__price-button"><a class="st-button js-open-popup" href="#" data-target-popup="product">купить</a></div>
+                    </div>
+                  </div>
+                  <div class="product-item__section tac"><a class="st-link" href="product-card.html">Подробнее</a></div>
+                </div>
               </article>
               <article class="product-item">
                 <header class="product-item__header">
@@ -525,18 +553,46 @@
                     <div class="icon-youtube-play"></div>
                   </div>
                 </header>
-                <div class="product-item__image-box">
-                  <div class="proportional-box"><img class="proportional-box__image" src="./images/examples/closet.jpg"></div>
-                </div>
-                <div class="product-item__section">
-                  <div class="product-item__descr">Мебельный кондуктор система "32" диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30</div>
-                </div>
-                <div class="product-item__section">
-                  <div class="product-item__price-grid"><span class="product-item__price-text">1 670 руб.</span>
-                    <div class="product-item__price-button"><a class="st-button js-open-popup" href="#" data-target-popup="product">купить</a></div>
+                <div class="product-item__main">
+                  <div class="product-item__image-box">
+                    <div class="proportional-box"><img class="proportional-box__image" src="./images/examples/closet.jpg"></div>
+                  </div>
+                  <div class="product-item__section">
+                    <div class="product-item__descr">Мебельный кондуктор система "32" диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30</div>
                   </div>
                 </div>
-                <div class="product-item__section tac"><a class="st-link" href="product-card.html">Подробнее</a></div>
+                <div class="product-item__footer">
+                  <div class="product-item__section">
+                    <div class="product-item__price-grid"><span class="product-item__price-text">1 670 руб.</span>
+                      <div class="product-item__price-button"><a class="st-button js-open-popup" href="#" data-target-popup="product">купить</a></div>
+                    </div>
+                  </div>
+                  <div class="product-item__section tac"><a class="st-link" href="product-card.html">Подробнее</a></div>
+                </div>
+              </article>
+              <article class="product-item">
+                <header class="product-item__header">
+                  <h2 class="product-item__title">МК-09</h2>
+                  <div class="product-item__video-icon js-open-popup" data-target-popup="video" data-video-src="https://www.youtube.com/embed/9qMpqiuQ_Gg?rel=0&amp;showinfo=0">
+                    <div class="icon-youtube-play"></div>
+                  </div>
+                </header>
+                <div class="product-item__main">
+                  <div class="product-item__image-box">
+                    <div class="proportional-box"><img class="proportional-box__image" src="./images/examples/closet.jpg"></div>
+                  </div>
+                  <div class="product-item__section">
+                    <div class="product-item__descr">Мебельный кондуктор система "32" диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30 Мебельный кондуктор система "32" диаметр втулк</div>
+                  </div>
+                </div>
+                <div class="product-item__footer">
+                  <div class="product-item__section">
+                    <div class="product-item__price-grid"><span class="product-item__price-text">1 670 руб.</span>
+                      <div class="product-item__price-button"><a class="st-button js-open-popup" href="#" data-target-popup="product">купить</a></div>
+                    </div>
+                  </div>
+                  <div class="product-item__section tac"><a class="st-link" href="product-card.html">Подробнее</a></div>
+                </div>
               </article>
             </div>
           </div>
@@ -579,18 +635,22 @@
                     <div class="icon-youtube-play"></div>
                   </div>
                 </header>
-                <div class="product-item__image-box">
-                  <div class="proportional-box"><img class="proportional-box__image" src="./images/examples/closet.jpg"></div>
-                </div>
-                <div class="product-item__section">
-                  <div class="product-item__descr">Мебельный кондуктор система "32" диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30</div>
-                </div>
-                <div class="product-item__section">
-                  <div class="product-item__price-grid"><span class="product-item__price-text">1 670 руб.</span>
-                    <div class="product-item__price-button"><a class="st-button js-open-popup" href="#" data-target-popup="product">купить</a></div>
+                <div class="product-item__main">
+                  <div class="product-item__image-box">
+                    <div class="proportional-box"><img class="proportional-box__image" src="./images/examples/closet.jpg"></div>
+                  </div>
+                  <div class="product-item__section">
+                    <div class="product-item__descr">Мебельный кондуктор система "32" диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30</div>
                   </div>
                 </div>
-                <div class="product-item__section tac"><a class="st-link" href="product-card.html">Подробнее</a></div>
+                <div class="product-item__footer">
+                  <div class="product-item__section">
+                    <div class="product-item__price-grid"><span class="product-item__price-text">1 670 руб.</span>
+                      <div class="product-item__price-button"><a class="st-button js-open-popup" href="#" data-target-popup="product">купить</a></div>
+                    </div>
+                  </div>
+                  <div class="product-item__section tac"><a class="st-link" href="product-card.html">Подробнее</a></div>
+                </div>
               </article>
               <article class="product-item">
                 <header class="product-item__header">
@@ -599,18 +659,22 @@
                     <div class="icon-youtube-play"></div>
                   </div>
                 </header>
-                <div class="product-item__image-box">
-                  <div class="proportional-box"><img class="proportional-box__image" src="./images/examples/closet.jpg"></div>
-                </div>
-                <div class="product-item__section">
-                  <div class="product-item__descr">Мебельный кондуктор система "32" диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30</div>
-                </div>
-                <div class="product-item__section">
-                  <div class="product-item__price-grid"><span class="product-item__price-text">1 670 руб.</span>
-                    <div class="product-item__price-button"><a class="st-button js-open-popup" href="#" data-target-popup="product">купить</a></div>
+                <div class="product-item__main">
+                  <div class="product-item__image-box">
+                    <div class="proportional-box"><img class="proportional-box__image" src="./images/examples/closet.jpg"></div>
+                  </div>
+                  <div class="product-item__section">
+                    <div class="product-item__descr">Мебельный кондуктор система "32" диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30</div>
                   </div>
                 </div>
-                <div class="product-item__section tac"><a class="st-link" href="product-card.html">Подробнее</a></div>
+                <div class="product-item__footer">
+                  <div class="product-item__section">
+                    <div class="product-item__price-grid"><span class="product-item__price-text">1 670 руб.</span>
+                      <div class="product-item__price-button"><a class="st-button js-open-popup" href="#" data-target-popup="product">купить</a></div>
+                    </div>
+                  </div>
+                  <div class="product-item__section tac"><a class="st-link" href="product-card.html">Подробнее</a></div>
+                </div>
               </article>
               <article class="product-item">
                 <header class="product-item__header">
@@ -619,18 +683,22 @@
                     <div class="icon-youtube-play"></div>
                   </div>
                 </header>
-                <div class="product-item__image-box">
-                  <div class="proportional-box"><img class="proportional-box__image" src="./images/examples/closet.jpg"></div>
-                </div>
-                <div class="product-item__section">
-                  <div class="product-item__descr">Мебельный кондуктор система "32" диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30</div>
-                </div>
-                <div class="product-item__section">
-                  <div class="product-item__price-grid"><span class="product-item__price-text">1 670 руб.</span>
-                    <div class="product-item__price-button"><a class="st-button js-open-popup" href="#" data-target-popup="product">купить</a></div>
+                <div class="product-item__main">
+                  <div class="product-item__image-box">
+                    <div class="proportional-box"><img class="proportional-box__image" src="./images/examples/closet.jpg"></div>
+                  </div>
+                  <div class="product-item__section">
+                    <div class="product-item__descr">Мебельный кондуктор система "32" диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30</div>
                   </div>
                 </div>
-                <div class="product-item__section tac"><a class="st-link" href="product-card.html">Подробнее</a></div>
+                <div class="product-item__footer">
+                  <div class="product-item__section">
+                    <div class="product-item__price-grid"><span class="product-item__price-text">1 670 руб.</span>
+                      <div class="product-item__price-button"><a class="st-button js-open-popup" href="#" data-target-popup="product">купить</a></div>
+                    </div>
+                  </div>
+                  <div class="product-item__section tac"><a class="st-link" href="product-card.html">Подробнее</a></div>
+                </div>
               </article>
               <article class="product-item">
                 <header class="product-item__header">
@@ -639,18 +707,22 @@
                     <div class="icon-youtube-play"></div>
                   </div>
                 </header>
-                <div class="product-item__image-box">
-                  <div class="proportional-box"><img class="proportional-box__image" src="./images/examples/closet.jpg"></div>
-                </div>
-                <div class="product-item__section">
-                  <div class="product-item__descr">Мебельный кондуктор система "32" диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30</div>
-                </div>
-                <div class="product-item__section">
-                  <div class="product-item__price-grid"><span class="product-item__price-text">1 670 руб.</span>
-                    <div class="product-item__price-button"><a class="st-button js-open-popup" href="#" data-target-popup="product">купить</a></div>
+                <div class="product-item__main">
+                  <div class="product-item__image-box">
+                    <div class="proportional-box"><img class="proportional-box__image" src="./images/examples/closet.jpg"></div>
+                  </div>
+                  <div class="product-item__section">
+                    <div class="product-item__descr">Мебельный кондуктор система "32" диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30</div>
                   </div>
                 </div>
-                <div class="product-item__section tac"><a class="st-link" href="product-card.html">Подробнее</a></div>
+                <div class="product-item__footer">
+                  <div class="product-item__section">
+                    <div class="product-item__price-grid"><span class="product-item__price-text">1 670 руб.</span>
+                      <div class="product-item__price-button"><a class="st-button js-open-popup" href="#" data-target-popup="product">купить</a></div>
+                    </div>
+                  </div>
+                  <div class="product-item__section tac"><a class="st-link" href="product-card.html">Подробнее</a></div>
+                </div>
               </article>
               <article class="product-item">
                 <header class="product-item__header">
@@ -659,18 +731,22 @@
                     <div class="icon-youtube-play"></div>
                   </div>
                 </header>
-                <div class="product-item__image-box">
-                  <div class="proportional-box"><img class="proportional-box__image" src="./images/examples/closet.jpg"></div>
-                </div>
-                <div class="product-item__section">
-                  <div class="product-item__descr">Мебельный кондуктор система "32" диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30</div>
-                </div>
-                <div class="product-item__section">
-                  <div class="product-item__price-grid"><span class="product-item__price-text">1 670 руб.</span>
-                    <div class="product-item__price-button"><a class="st-button js-open-popup" href="#" data-target-popup="product">купить</a></div>
+                <div class="product-item__main">
+                  <div class="product-item__image-box">
+                    <div class="proportional-box"><img class="proportional-box__image" src="./images/examples/closet.jpg"></div>
+                  </div>
+                  <div class="product-item__section">
+                    <div class="product-item__descr">Мебельный кондуктор система "32" диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30</div>
                   </div>
                 </div>
-                <div class="product-item__section tac"><a class="st-link" href="product-card.html">Подробнее</a></div>
+                <div class="product-item__footer">
+                  <div class="product-item__section">
+                    <div class="product-item__price-grid"><span class="product-item__price-text">1 670 руб.</span>
+                      <div class="product-item__price-button"><a class="st-button js-open-popup" href="#" data-target-popup="product">купить</a></div>
+                    </div>
+                  </div>
+                  <div class="product-item__section tac"><a class="st-link" href="product-card.html">Подробнее</a></div>
+                </div>
               </article>
               <article class="product-item">
                 <header class="product-item__header">
@@ -679,18 +755,22 @@
                     <div class="icon-youtube-play"></div>
                   </div>
                 </header>
-                <div class="product-item__image-box">
-                  <div class="proportional-box"><img class="proportional-box__image" src="./images/examples/closet.jpg"></div>
-                </div>
-                <div class="product-item__section">
-                  <div class="product-item__descr">Мебельный кондуктор система "32" диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30</div>
-                </div>
-                <div class="product-item__section">
-                  <div class="product-item__price-grid"><span class="product-item__price-text">1 670 руб.</span>
-                    <div class="product-item__price-button"><a class="st-button js-open-popup" href="#" data-target-popup="product">купить</a></div>
+                <div class="product-item__main">
+                  <div class="product-item__image-box">
+                    <div class="proportional-box"><img class="proportional-box__image" src="./images/examples/closet.jpg"></div>
+                  </div>
+                  <div class="product-item__section">
+                    <div class="product-item__descr">Мебельный кондуктор система "32" диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30</div>
                   </div>
                 </div>
-                <div class="product-item__section tac"><a class="st-link" href="product-card.html">Подробнее</a></div>
+                <div class="product-item__footer">
+                  <div class="product-item__section">
+                    <div class="product-item__price-grid"><span class="product-item__price-text">1 670 руб.</span>
+                      <div class="product-item__price-button"><a class="st-button js-open-popup" href="#" data-target-popup="product">купить</a></div>
+                    </div>
+                  </div>
+                  <div class="product-item__section tac"><a class="st-link" href="product-card.html">Подробнее</a></div>
+                </div>
               </article>
               <article class="product-item">
                 <header class="product-item__header">
@@ -699,18 +779,22 @@
                     <div class="icon-youtube-play"></div>
                   </div>
                 </header>
-                <div class="product-item__image-box">
-                  <div class="proportional-box"><img class="proportional-box__image" src="./images/examples/closet.jpg"></div>
-                </div>
-                <div class="product-item__section">
-                  <div class="product-item__descr">Мебельный кондуктор система "32" диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30</div>
-                </div>
-                <div class="product-item__section">
-                  <div class="product-item__price-grid"><span class="product-item__price-text">1 670 руб.</span>
-                    <div class="product-item__price-button"><a class="st-button js-open-popup" href="#" data-target-popup="product">купить</a></div>
+                <div class="product-item__main">
+                  <div class="product-item__image-box">
+                    <div class="proportional-box"><img class="proportional-box__image" src="./images/examples/closet.jpg"></div>
+                  </div>
+                  <div class="product-item__section">
+                    <div class="product-item__descr">Мебельный кондуктор система "32" диаметр втулки 7 мм. МОЖНО СТАВИТЬ ШКАНТЫ 7х30</div>
                   </div>
                 </div>
-                <div class="product-item__section tac"><a class="st-link" href="product-card.html">Подробнее</a></div>
+                <div class="product-item__footer">
+                  <div class="product-item__section">
+                    <div class="product-item__price-grid"><span class="product-item__price-text">1 670 руб.</span>
+                      <div class="product-item__price-button"><a class="st-button js-open-popup" href="#" data-target-popup="product">купить</a></div>
+                    </div>
+                  </div>
+                  <div class="product-item__section tac"><a class="st-link" href="product-card.html">Подробнее</a></div>
+                </div>
               </article>
             </div>
           </div>
@@ -791,11 +875,11 @@
           <li class="main-nav__item main-nav-item"><a class="main-nav-item__link" href="index.html"><span class="main-nav-item__link-text">Главная</span></a></li>
           <li class="main-nav__item main-nav-item">
             <div class="main-nav-item__link-box"><a class="main-nav-item__link" href="#"><span class="main-nav-item__link-text">Продукция Черон</span></a>
-              <button class="main-nav-item__toggle js-dropmenu-toggle">3</button>
+              <div class="main-nav-item__toggle js-dropmenu-toggle">3</div>
             </div>
             <div class="main-nav-item__dropmenu">
               <div class="main-nav-item__title-box">
-                <button class="main-nav-item__toggle main-nav-item__toggle_prev js-dropmenu-toggle"></button><a class="main-nav-item__link tac" href="#"><span class="main-nav-item__link-text">Продукция Черон</span></a>
+                <div class="main-nav-item__toggle main-nav-item__toggle_prev js-dropmenu-toggle"></div><a class="main-nav-item__link tac" href="#"><span class="main-nav-item__link-text">Продукция Черон</span></a>
               </div>
               <div class="main-nav__item"><a class="main-nav-item__link" href="index.html"><span class="main-nav-item__link-text">Кондукторы и шаблоны</span></a></div>
               <div class="main-nav__item"><a class="main-nav-item__link" href="index.html"><span class="main-nav-item__link-text">Для мебельного производства</span></a></div>

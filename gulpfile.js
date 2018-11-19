@@ -92,7 +92,7 @@ gulp.task('style:build', function () {
         .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
         //.pipe(sourcemaps.init())
         .pipe(sass({errLogToConsole: true}))
-        .pipe(prefixer())
+        .pipe(prefixer('last 2 versions'))
         .pipe(cssmin())
         //.pipe(sourcemaps.write())
         .pipe(gulp.dest(path.build.css))

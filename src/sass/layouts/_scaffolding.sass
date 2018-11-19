@@ -230,11 +230,11 @@ body
     justify-content: center
     flex-wrap: wrap
     cursor: pointer
+    padding: 5px 0
     &__line
         width: 24px
         height: 3px
         background-color: #333
-        margin: 2px 0
     &:hover
         background-color: $yellow
 
@@ -618,7 +618,7 @@ body
         display: flex
         justify-content: space-between
         align-items: center
-        margin: 0 -25px 25px
+        margin: 0 -20px 25px
         padding: 20px 25px
         background-color: $lightGray
     &__price-box-title
@@ -682,6 +682,7 @@ body
         flex-shrink: 0
         text-align: center
         text-transform: uppercase
+        padding: 5px
     &__counter
         padding: 5px 10px
         width: 150px
@@ -894,6 +895,7 @@ body
     outline: none
     cursor: pointer
     border: none
+    background-color: transparent
     font-size: 22px
     color: inherit
 
@@ -1107,11 +1109,19 @@ body
     border: 1px solid $darkGray
     height: 100%
     position: relative
+    padding-bottom: 111px
     &_new
         border-color: $yellow
         padding: 15px 15px 0
     &__gallery
         display: none
+    &__footer
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+        height: 111px
+        border-top: 2px solid #eeeeec
     &__section
         padding: 15px 10px
         border-bottom: 2px solid #eeeeec
@@ -1493,6 +1503,7 @@ a.nav-list-item_color_yellow:hover
         left: -20px
         top: 50%
         margin-top: -21px
+        outline: none
         transform: rotate(135deg)
         border: 1px solid #000
         background-color: $yellow
@@ -1504,15 +1515,21 @@ a.nav-list-item_color_yellow:hover
             border-bottom: 3px solid #000
             position: absolute
             top: 50%
-            margin-top: -8px
+            margin-top: -10px
             left: 50%
-            margin-left: -8px
+            margin-left: -10px
     .owl-nav button.owl-next
         left: auto
         transform: rotate(-45deg)
         right: -20px
 
 
+.slider-carousel
+    .owl-stage
+        display: flex
+
+    .owl-item
+        padding: 1px
 
 .carousel
     height: 110px
@@ -1698,6 +1715,9 @@ a.nav-list-item_color_yellow:hover
             background-color: $lightYellow
         &.active
             background-color: $yellow
+    &__button-value
+        color: $darkGray
+        padding-left: 5px
     &__content
         padding: 25px 20px
     &__content-item
@@ -2612,9 +2632,16 @@ a.nav-list-item_color_yellow:hover
         margin-left: calc(100vw - 100%)
         margin-right: 0
 
-
-
 @media screen and (max-width: 1300px)
+    .page
+        overflow: hidden
+
+    .icon-button__dropdown
+        left: auto
+        transform: none
+        right: 0
+        width: 280px
+
     .page-header__bottom-nav
         font-size: 12px
 
@@ -2647,11 +2674,15 @@ a.nav-list-item_color_yellow:hover
         width: 90%
 
     .product-item
+        padding-bottom: 140px
+        &__footer
+            height: 140px
         &__price-grid
             display: block
         &__price-text
             text-align: center
             margin-bottom: 15px
+            display: block
         &__price-button
             text-align: center
 
@@ -2730,6 +2761,9 @@ a.nav-list-item_color_yellow:hover
 
 @media screen and (max-width: 768px)
     .products-list-item_basket
+        flex-wrap: wrap
+
+    .products-list-item_gift
         flex-wrap: wrap
 
     .search
